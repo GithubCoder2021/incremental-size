@@ -1,3 +1,6 @@
+var size = 10
+var growthPerSecond = 0
+
 setInterval(function() {
   size += growthPerSecond;
 	
