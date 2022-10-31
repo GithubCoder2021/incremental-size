@@ -6,18 +6,19 @@ setInterval(function() {
   size += growthPerSecond;
 	
   document.getElementById("number").innerText = size;
-}, 1000)
+}, 1000);
 
-function buyGrowth() {
+
+function buyWorker() { 
    if (size >= growthCost) {
       size-= growthCost;
-      growthPerSecond ++;
       document.getElementById("number").innerText = size;
+      growthPerSecond ++;
       document.getElementById("growthSpeed").innerText = growthPerSecond;
       growthCost = Math.floor(growthCost * 1.15);
       document.getElementById("growthPurchase").innerText = growthCost;
-   }
-   else {
+   } else {
      alert("You're too small!!!");
-       }  
-   }
+    }  
+	
+}
