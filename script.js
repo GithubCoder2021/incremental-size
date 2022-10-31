@@ -9,7 +9,7 @@ setInterval(function() {
 }, 1000);
 
 
-function buyWorker() { 
+function buyGrowth() { 
    if (size >= growthCost) {
       size-= growthCost;
       document.getElementById("number").innerText = size;
