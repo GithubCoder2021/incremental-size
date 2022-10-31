@@ -11,6 +11,11 @@ setInterval(function() {
 }, 1000);
 
 
+setInterval(function() {
+  save();
+}, 30000);
+
+
 function buyGrowth() { 
    if (size >= growthCost) {
       size -= growthCost;
