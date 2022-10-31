@@ -28,8 +28,8 @@ function buyMulti() {
    if (size >= multiCost) {
       size -= multiCost;
       document.getElementById("number").innerText = size;
-      multiplier = Math.floor(growthPerSecond * multiplier);
-      document.getElementById("multiplier").innerText = multiplier;
+      growthPerSecond = Math.floor(growthPerSecond * multiplier);
+      document.getElementById("growthSpeed").innerText = growthPerSecond;
       multiCost = Math.floor(multiCost * 1.2);
       document.getElementById("multiPurchase").innerText = multiCost;
    } else {
