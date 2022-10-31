@@ -50,7 +50,7 @@ function multBaseInc() {
       size -= multiBaseCost;
       document.getElementById("number").innerText = size;
       multiplier = Math.floor(multiplier + 0.5);
-      document.getElementById("growthSpeed").innerText = multiplier;
+      document.getElementById("multiplier").innerText = multiplier;
       multiBaseCost = Math.floor(multiBaseCost * 1.65);
       document.getElementById("multiPurchase").innerText = multiBaseCost;
    } else {
