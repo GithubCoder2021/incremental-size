@@ -11,11 +11,11 @@ setInterval(function() {
 
 function buyGrowth() { 
    if (size >= growthCost) {
-     var size -= growthCost;
+      size -= growthCost;
       document.getElementById("number").innerText = size;
-      var growthPerSecond ++;
+      growthPerSecond ++;
       document.getElementById("growthSpeed").innerText = growthPerSecond;
-      var growthCost = Math.floor(growthCost * 1.15);
+      growthCost = Math.floor(growthCost * 1.15);
       document.getElementById("growthPurchase").innerText = growthCost;
    } else {
      alert("You're too small!!!");
