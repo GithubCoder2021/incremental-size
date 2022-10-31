@@ -3,6 +3,7 @@ var growthPerSecond = 0;
 var growthCost = 10;
 var multiCost = 100;
 var multiplier = 1.5;
+var multiBaseCost = 1000;
 setInterval(function() {
   size += growthPerSecond;
 	
@@ -38,6 +39,20 @@ function buyMulti() {
 	
 }
 
+
+function multBaseInc() { 
+   if (size >= multiBaseCost) {
+      size -= multiBaseCost;
+      document.getElementById("number").innerText = size;
+      multiplier = Math.floor(multiplier + 0.5);
+      document.getElementById("growthSpeed").innerText = growthPerSecond;
+      multiBaseCost = Math.floor(multiBaseCost * 1.65);
+      document.getElementById("multiPurchase").innerText = multiBaseCost;
+   } else {
+     alert("You're too small!!!");
+    }  
+	
+}
 
 setInterval(function() {
   if (size <= 1.6e+11) {
@@ -131,7 +146,7 @@ window.onload = function() {
    document.getElementById("growthPurchase").innerText = growthPerCost;
    document.getElementById("multiPurchase").innerText = multiCost;
    document.getElementById("multiplier").innerText = multiplier;
-   document.getElementById("multiBasePurchase").innerText = multiBaseCost;
+   document.getElementById("multBaseCost").innerText = multiBaseCost;
 }
 
 function deleteSave() {
@@ -141,5 +156,6 @@ function deleteSave() {
    var growthCost = 10;
    var multiCost = 100;
    var multiplier = 1.5;
+   var multiBaseCost = 1000;
    location.reload()
 }
