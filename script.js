@@ -99,3 +99,37 @@ setInterval(function() {
      document.getElementById("measurement").innerText = "Yottameters";
   } 
 }, 10);
+
+function save() {
+  var save  = {  
+    size: size,
+    growthPerSecond: growthPerSecond,
+    growthCost: growthCost,
+    multiCost: multiCost,
+    multiplier: multiplier,
+    multiBaseCost: multiBaseCost
+  }
+  localStorage.setItem("save",JSON.stringify(save));
+}
+
+function load() {
+  var savegame = JSON.parse(localStorage.getItem("save"));
+  if (typeof savegame.size !== "undefined") size = savegame.size;
+  if (typeof savegame.growthPerSecond !== "undefined") growthPerSecond = savegame.growthPerSecond;
+  if (typeof savegame.growthCost !== "undefined") growthCost = savegame.growthCost;
+  if (typeof savegame.multiCost !== "undefined") multiCost = savegame.multiCost;
+  if (typeof savegame.multiplier !== "undefined") multiplier = savegame.multiplier;
+  if (typeof savegame.multiBaseCost !== "undefined") multiBaseCost = savegame.multiBaseCost;
+	
+}
+
+
+window.onload = function() {
+   load();
+   document.getElementById("number").innerText = size;
+   document.getElementById("growthSpeed").innerText = growthPerCost;
+   document.getElementById("growthPurchase").innerText = growthPerCost;
+   document.getElementById("multiPurchase").innerText = multiCost;
+   document.getElementById("multiplier").innerText = multiplier;
+   document.getElementById("multiBasePurchase").innerText = multiBaseCost;
+}
