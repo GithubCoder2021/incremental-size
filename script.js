@@ -133,3 +133,13 @@ window.onload = function() {
    document.getElementById("multiplier").innerText = multiplier;
    document.getElementById("multiBasePurchase").innerText = multiBaseCost;
 }
+
+function deleteSave() {
+   localStorage.removeItem("save")
+   var size = 10;
+   var growthPerSecond = 0;
+   var growthCost = 10;
+   var multiCost = 100;
+   var multiplier = 1.5;
+   location.reload()
+}
