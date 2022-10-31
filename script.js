@@ -31,7 +31,7 @@ function buyMulti() {
       multiplier = Math.floor(growthPerSecond * multiplier);
       document.getElementById("multiplier").innerText = multiplier;
       multiCost = Math.floor(multiCost * 1.2);
-      document.getElementById("multiCost").innerText = multicost;
+      document.getElementById("multiPurchase").innerText = multiCost;
    } else {
      alert("You're too small!!!");
     }  
