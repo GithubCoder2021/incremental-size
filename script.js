@@ -52,7 +52,7 @@ function multBaseInc() {
       multiplier = multiplier + 0.5;
       document.getElementById("multiplier").innerText = multiplier;
       multiBaseCost = Math.floor(multiBaseCost * 1.65);
-      document.getElementById("multiPurchase").innerText = multiBaseCost;
+      document.getElementById("multBaseCost").innerText = multiBaseCost;
    } else {
      alert("You're too small!!!");
     }  
