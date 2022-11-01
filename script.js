@@ -2,7 +2,7 @@ var size = 10;
 var growthPerSecond = 0;
 var growthCost = 10;
 var multiCost = 100;
-var multiplier = 1.5;
+var multiplier = 1.1;
 var multiBaseCost = 1000;
 setInterval(function() {
   size += growthPerSecond;
@@ -11,9 +11,7 @@ setInterval(function() {
 }, 1000);
 
 
-setInterval(function() {
-  save();
-}, 30000);
+
 
 
 function buyGrowth() { 
@@ -34,7 +32,7 @@ function buyMulti() {
       document.getElementById("number").innerText = size;
       growthPerSecond = Math.floor(growthPerSecond * multiplier);
       document.getElementById("growthSpeed").innerText = growthPerSecond;
-      multiCost = Math.floor(multiCost * 1.45);
+      multiCost = Math.floor(multiCost * 1.6);
       document.getElementById("multiPurchase").innerText = multiCost;
    }   
 	
@@ -45,7 +43,7 @@ function multBaseInc() {
    if (size >= multiBaseCost) {
       size -= multiBaseCost;
       document.getElementById("number").innerText = size;
-      multiplier = multiplier + 0.5;
+      multiplier = multiplier + 0.01;
       document.getElementById("multiplier").innerText = multiplier;
       multiBaseCost = Math.floor(multiBaseCost * 1.65);
       document.getElementById("multBaseCost").innerText = multiBaseCost;
