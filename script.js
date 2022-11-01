@@ -24,9 +24,7 @@ function buyGrowth() {
       document.getElementById("growthSpeed").innerText = growthPerSecond;
       growthCost = Math.floor(growthCost * 1.15);
       document.getElementById("growthPurchase").innerText = growthCost;
-   } else {
-     alert("You're too small!!!");
-    }  
+   } 
 	
 }
 
@@ -38,9 +36,7 @@ function buyMulti() {
       document.getElementById("growthSpeed").innerText = growthPerSecond;
       multiCost = Math.floor(multiCost * 1.45);
       document.getElementById("multiPurchase").innerText = multiCost;
-   } else {
-     alert("You're too small!!!");
-    }  
+   }   
 	
 }
 
@@ -53,10 +49,7 @@ function multBaseInc() {
       document.getElementById("multiplier").innerText = multiplier;
       multiBaseCost = Math.floor(multiBaseCost * 1.65);
       document.getElementById("multBaseCost").innerText = multiBaseCost;
-   } else {
-     alert("You're too small!!!");
-    }  
-	
+   } 	
 }
 
 setInterval(function() {
