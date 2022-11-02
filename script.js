@@ -43,7 +43,7 @@ function multBaseInc() {
    if (size >= multiBaseCost) {
       size -= multiBaseCost;
       document.getElementById("number").innerText = size;
-      multiplier = multiplier + 0.01;
+      multiplier = multiplier + 0.1;
       document.getElementById("multiplier").innerText = multiplier;
       multiBaseCost = Math.floor(multiBaseCost * 1.65);
       document.getElementById("multBaseCost").innerText = multiBaseCost;
